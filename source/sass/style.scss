@@ -1,0 +1,43 @@
+@import "fonts.scss";
+@import "variables.scss";
+@import "mixins.scss";
+@import "blocks/button.scss";
+@import "blocks/visually-hidden.scss";
+@import "blocks/main-header.scss";
+@import "blocks/nav.scss";
+@import "blocks/main.scss";
+@import "blocks/promo.scss";
+@import "blocks/options.scss";
+@import "blocks/advantages.scss";
+@import "blocks/example.scss";
+@import "blocks/slider.scss";
+@import "blocks/main-footer.scss";
+@import "blocks/map.scss";
+@import "blocks/social.scss";
+@import "blocks/developers";
+@import "blocks/catalog.scss";
+@import "blocks/bonus.scss";
+@import "blocks/card.scss";
+@import "blocks/extra.scss";
+@import "blocks/product-cards.scss";
+@import "blocks/table.scss";
+@import "blocks/forms.scss";
+
+body {
+  @include reset-space;
+  background-color: $white;
+
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 16px;
+  color: $black;
+
+  min-width: $mobile-size;
+
+  outline: 1px solid black;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

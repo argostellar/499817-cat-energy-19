@@ -1,0 +1,168 @@
+.promo {
+  @include flex-column;
+
+  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+}
+
+.promo__wrapper {
+  @include flex-column;
+  align-items: center;
+}
+
+.promo__title {
+  color: $white;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+
+  text-align: center;
+
+  @include reset-space;
+
+  padding: 0 35px;
+  padding-top: 25px;
+
+  margin-bottom: 25px;
+}
+
+.promo__text {
+  color: $white;
+  font-size: 14px;
+  line-height: 14px;
+  text-transform: uppercase;
+
+  @include reset-space;
+
+  margin-bottom: 29px;
+}
+
+.promo__link {
+  @include mobile-space;
+  align-self: stretch;
+  box-sizing: border-box;
+  margin-top: 1px;
+  padding-top: 11px;
+}
+
+.promo__image {
+  @include empty-rule;
+}
+
+@media (min-width: $tablet-size) {
+  .promo {
+    @include tablet-space;
+    background-image: none;
+    margin-left: 117px;
+  }
+
+  .promo__wrapper {
+    align-items: flex-start;
+  }
+
+  .promo__title {
+    max-width: 427px;
+
+    @include reset-space;
+    margin-top: 52px;
+    margin-bottom: 41px;
+
+    margin-left: 0;
+
+    @include tablet-title-font;
+    color: $black;
+
+    text-align: left;
+
+    order: 1;
+  }
+
+  .promo__text {
+    @include tablet-text-font;
+    color: $black;
+
+    margin-left: 1px;
+
+    order: 2;
+  }
+
+  .promo__link {
+    width: 245px;
+
+    margin: 0;
+    margin-left: 2px;
+    margin-top: 19px;
+
+    padding-top: 16px;
+    padding-right: 1px;
+
+    @include tablet-text-font;
+
+    order: 3;
+  }
+
+  .promo__image {
+    width: 709px;
+    height: 609px;
+
+    z-index: -1;
+
+    margin-top: -40px;
+    margin-bottom: -40px;
+    margin-left: -44px;
+    order: 4;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .promo {
+    @include reset-space;
+    @include desktop-container;
+    margin-bottom: 268px;
+  }
+
+  .promo::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    min-height: 696px;
+    top: 0;
+    right: 0;
+    left: inherit;
+    background-image: url("../img/index-background-desktop@1x.jpg");
+    background-color: $green;
+    background-position: 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .promo__wrapper {
+    position: relative;
+  }
+
+  .promo__title {
+    margin-top: 104px;
+    margin-left: 80px;
+  }
+
+  .promo__text {
+    margin-left: 80px;
+  }
+
+  .promo__link {
+    margin-top: 24px;
+    margin-left: 80px;
+  }
+
+
+  .promo__image {
+    position: absolute;
+    top: 52px;
+    right: 109px;
+    width: 552px;
+    height: 499px;
+    align-self: flex-end;
+    z-index: 1;
+  }
+}

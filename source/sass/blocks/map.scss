@@ -1,0 +1,145 @@
+.map {
+  @include empty-rule;
+}
+
+.map__info {
+  @include mobile-space;
+  @include flex-row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 0;
+}
+
+.map__invitation-text {
+  @include reset-space;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+
+  text-transform: uppercase;
+  max-width: 130px;
+}
+
+.map__address {
+  @include reset-space;
+  @include arial-text;
+  line-height: 20px;
+  margin-left: auto;
+  margin-right: 5px;
+  max-height: 60px;
+}
+
+.map__address-line {
+  @include reset-space;
+}
+
+.map__map {
+  min-width: 280px;
+  min-height: 362px;
+  background-color: $map-bg-color;
+
+  background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@1x.png");
+  background-position: right 50% top 136px, 40% 110%;
+  background-repeat: no-repeat;
+  background-size: 55px 53px, auto;
+}
+
+@media (min-width: $tablet-size) {
+  .map {
+    @include empty-rule;
+  }
+
+  .map__info {
+    padding-bottom: 55px;
+  }
+
+  .map__invitation-text {
+    margin-top: -3px;
+    margin-left: 50px;
+    max-width: 160px;
+    text-align: left;
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .map__address {
+    @include flex-column;
+    justify-content: space-between;
+    margin-right: 51px;
+    margin-top: -7px;
+
+    @include tablet-arial-text;
+    max-width: 160px;
+    max-height: 100px;
+    height: 90px;
+    text-align: right;
+  }
+
+  .map__address-line {
+    @include reset-space;
+
+    &--top {
+      margin-top: 5px;
+      margin-bottom: auto;
+    }
+
+    &--middle {
+      margin-top: -19px;
+      margin-bottom: 0;
+    }
+
+    &--bottom {
+      margin-top: auto;
+    }
+  }
+
+  .map__map {
+    min-height: 396px;
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@1x.png");
+    background-position: right 50% top 146px, 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 113px 106px, auto;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .map {
+    @include empty-rule;
+    position: relative;
+  }
+
+  .map__info {
+    width: 570px;
+    height: 201px;
+
+    padding: 60px 75px;
+    box-sizing: border-box;
+
+    position: absolute;
+
+    left: 90px;
+    top: 94px;
+
+    background-color: $white;
+  }
+
+  .map__invitation-text {
+    margin: 0;
+    margin-top: 5px;
+    margin-left: 1px;
+  }
+
+  .map__address {
+    margin: 0;
+    margin-right: 16px;
+    text-align: left;
+  }
+
+  .map__map {
+    min-height: 396px;
+    background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop@1x.png");
+    background-position: right 323px top 150px, 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 113px 106px, auto;
+  }
+}

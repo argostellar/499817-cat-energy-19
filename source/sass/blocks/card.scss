@@ -1,0 +1,149 @@
+.card {
+  @include flex-column;
+  justify-content: space-between;
+
+  box-sizing: border-box;
+  border-top: 1px solid #ededed;
+
+  margin-bottom: 24px;
+
+  height: 185px;
+}
+
+.card__wrapper {
+  @include mobile-space;
+  @include flex-row;
+  justify-content: space-around;
+  margin-bottom: 0;
+}
+
+.card__image-wrapper {
+  height: 144px;
+}
+
+.card__image {
+  height: 100%;
+}
+
+.card__table-wrapper {
+  @include flex-column;
+  justify-content: space-between;
+  min-width: 140px;
+}
+
+.card__title {
+  @include reset-space;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  max-width: 75px;
+
+  margin-top: 21px;
+}
+
+.card__table {
+  @include empty-rule;
+  margin-bottom: 22px;
+}
+
+.card__button {
+  @include mobile-space;
+  height: 40px;
+  font-size: 16px;
+  line-height: 20px;
+
+  margin-top: 0;
+
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+@media (min-width: $tablet-size) {
+  .card {
+    background-color: $button-grey;
+    min-width: 324px;
+    min-height: 431px;
+
+    padding: 40px 37px;
+  }
+
+  .card__title {
+    @include tablet-text-font;
+    text-align: center;
+    align-self: center;
+
+    max-width: 130px;
+
+    margin-top: -2px;
+    margin-bottom: 27px;
+  }
+
+  .card__wrapper {
+    @include flex-column;
+    justify-content: center;
+    margin: 0;
+    min-height: 350px;
+  }
+
+  .card__table-wrapper {
+    margin-top: -20px;
+  }
+
+  .card__image-wrapper {
+    width: auto;
+    height: 100px;
+
+    position: relative;
+  }
+
+  .card__image {
+    width: auto;
+    height: auto;
+
+    max-width: 130%;
+
+    position: absolute;
+
+    top: -131px;
+    left: -37px;
+
+    &--large {
+      top: -167px;
+    }
+  }
+
+  .card__button {
+    @include reset-space;
+    height: auto;
+    min-height: auto;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+    margin-top: -45px;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .card {
+    align-items: center;
+  }
+
+  .card__wrapper {
+    width: 169px;
+  }
+
+  .card__image {
+    max-width: 155%;
+    top: -130px;
+
+    &--large {
+      top: -166px;
+    }
+  }
+
+  .card__button {
+    width: 169px;
+  }
+}

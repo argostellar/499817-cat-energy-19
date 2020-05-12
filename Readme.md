@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Арсений Кудрявцев](https://up.htmlacademy.ru/adaptive/19/user/499817).
-* Наставник: `Неизвестно`.
+* Наставник: [Арсений Кудрявцев](https://up.htmlacademy.ru/adaptive/19/user/499817).
 
 ---
 

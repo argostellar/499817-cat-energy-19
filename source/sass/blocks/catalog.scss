@@ -1,0 +1,52 @@
+.catalog {
+  @include flex-column;
+  justify-content: space-around;
+  align-items: stretch;
+}
+
+.catalog__title {
+  @include title;
+  margin-top: 14px;
+  margin-bottom: 28px;
+  margin-left: 20px;
+  align-self: flex-start;
+}
+
+.catalog__product-cards {
+  @include empty-rule;
+}
+
+.catalog__extra-items {
+  @include empty-rule;
+}
+
+@media (min-width: $tablet-size) {
+  .catalog {
+    display: block;
+  }
+
+  .catalog__title {
+    @include tablet-title-font;
+    text-align: left;
+    margin-top: 52px;
+    margin-left: 30px;
+    margin-bottom: 165px;
+  }
+
+  .catalog__product-cards {
+    @include tablet-space;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .catalog {
+    margin-bottom: 87px;
+  }
+
+  .catalog__title {
+    @include reset-space;
+    @include desktop-space;
+    margin-top: 70px;
+    margin-bottom: 165px;
+  }
+}

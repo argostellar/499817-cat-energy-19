@@ -1,0 +1,233 @@
+.example {
+  @include mobile-space;
+  background-color: $button-grey;
+}
+
+.example__title {
+  @include title;
+  margin-bottom: 23px;
+}
+
+.example__statistics {
+  @include flex-column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+  margin-bottom: 35px;
+}
+
+
+.example__text {
+  @include arial-text;
+  @include reset-space;
+  max-width: 270px;
+  margin-bottom: 25px;
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.example__wrapper {
+  @include flex-column;
+}
+
+.example__statistics-wrapper {
+  @include flex-column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.example__outer-wrapper {
+  @include flex-row;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 35px;
+}
+
+.example__inner-wrapper {
+  @include flex-column;
+  align-items: center;
+
+  position: relative;
+
+  width: 124px;
+
+  box-sizing: border-box;
+  border-radius: 3px;
+  border: 1px solid $light-grey;
+}
+
+.example__central-text {
+  @include reset-space;
+  font-size: 24px;
+  line-height: 24px;
+
+  margin: 13px 20px;
+  margin-bottom: 16px;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.example__description-text {
+  @include reset-space;
+  @include arial-text;
+  font-size: 12px;
+  line-height: 12px;
+
+  position: absolute;
+
+  top: 45px;
+
+  max-width: 60px;
+
+  padding: 0 10px;
+
+  text-transform: lowercase;
+  text-align: center;
+
+  z-index: 2;
+
+  background-color: $button-grey;
+}
+
+.example__result-text {
+  @include reset-space;
+  font-size: 14px;
+  line-height: 20px;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.example__slider {
+  @include empty-rule;
+}
+
+@media (min-width: $tablet-size) {
+  .example {
+    margin: 0;
+    background-color: transparent;
+  }
+
+  .example__title {
+    @include tablet-space;
+    @include tablet-title-font;
+    margin-bottom: 64px;
+  }
+
+  .example__text {
+    @include tablet-arial-text;
+    margin-bottom: 53px;
+    margin-right: 0;
+    max-width: 100%;
+    width: 97%;
+  }
+
+  .example__result-text {
+    @include tablet-text-font;
+    max-width: 180px;
+    text-align: right;
+    margin-top: 7px;
+    line-height: 29px;
+  }
+
+  .example__statistics {
+    @include tablet-space;
+    margin-bottom: 220px;
+  }
+
+  .example__statistics-wrapper {
+    @include flex-row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0;
+  }
+
+  .example__outer-wrapper {
+    max-width: 366px;
+  }
+
+  .example__inner-wrapper {
+    width: 162px;
+    min-height: 72px;
+    justify-content: space-between;
+  }
+
+  .example__central-text {
+    font-size: 30px;
+    line-height: 37.02px;
+    margin-top: 14px;
+  }
+
+  .example__description-text {
+    font-size: 14px;
+    line-height: 14px;
+    max-width: 127px;
+    margin-top: 18px;
+
+    background-color: $white;
+  }
+}
+
+@media (min-width: $desktop-size) {
+  .example {
+    background-image: linear-gradient(to bottom, $white 22.5%, $button-grey 22.5%);
+  }
+
+  .example__title {
+    @include desktop-container;
+    margin-bottom: 76px;
+  }
+
+  .example__wrapper {
+    @include desktop-container;
+    @include flex-row;
+    justify-content: space-between;
+    background-color: $button-grey;
+  }
+
+  .example__statistics {
+    background-color: $button-grey;
+    justify-content: space-between;
+    margin: 0;
+    max-width: 570px;
+  }
+
+  .example__statistics-wrapper {
+    @include flex-column;
+    justify-content: space-between;
+    width: 366px;
+    margin-bottom: 30px;
+  }
+
+  .example__outer-wrapper {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .example__inner-wrapper {
+    margin: 0;
+  }
+
+  .example__text {
+    max-width: 445px;
+    margin-top: 70px;
+    margin-bottom: 0;
+  }
+
+  .example__result-text {
+    text-align: left;
+    max-width: 100%;
+    align-self: flex-start;
+    margin-top: 22px;
+    margin-bottom: 40px;
+  }
+
+  .example__result-price {
+    margin-left: 59px;
+  }
+
+  .example__description-text {
+    background-color: $button-grey;
+  }
+}

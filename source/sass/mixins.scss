@@ -1,0 +1,113 @@
+@mixin arial-text {
+  font-family: "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+
+  color: #444444;
+}
+
+@mixin title {
+  font-size: 36px;
+  line-height: 60px;
+  font-weight: 400;
+
+  margin: 0;
+  padding: 0;
+}
+
+@mixin clear-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin reset-space {
+  margin: 0;
+  padding: 0;
+}
+
+@mixin mobile-space {
+  margin: 0 20px;
+}
+
+@mixin tablet-space {
+  margin: 0 30px;
+}
+
+@mixin desktop-space {
+  margin: 0 110px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1220px;
+}
+
+@mixin desktop-container {
+  width: $desktop-width;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@mixin font-family {
+  font-family: "Oswald", "Arial", sans-serif;
+}
+
+@mixin tablet-text-font {
+  font-size: 20px;
+  line-height: 20px;
+}
+
+@mixin tablet-arial-text {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+@mixin tablet-title-font {
+  font-size: 60px;
+  line-height: 60px;
+}
+
+@mixin active-states {
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+@mixin empty-rule {
+  outline: 1px solid transparent;
+}
+
+@mixin redline {
+  outline: 1px solid red;
+}
+
+@mixin yellowline {
+  outline: 3px dashed yellow;
+}
+
+@mixin blackline {
+  outline: 1px solid black;
+}
+
+@mixin violetline {
+  outline: 2px dotted violet;
+}
+
+@mixin greenline {
+  outline: 2px solid green;
+}

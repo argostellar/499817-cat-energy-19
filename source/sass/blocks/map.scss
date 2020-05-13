@@ -45,7 +45,7 @@
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@2x.png");
-    background-size: 55px 53px, 640px auto;
+    background-size: 55px 53px, 320px auto;
   }
 }
 
@@ -107,7 +107,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@2x.png");
-      background-size: 55px 53px, 1534px auto;
+      background-size: 113px 106px, 767px auto;
     }
   }
 }
@@ -154,7 +154,7 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/map-pin.png"), url("../img/bg-map-desktop@2x.png");
-      background-size: 55px 53px, 2880px auto;
+      background-size: 113px 106px, 1440px auto;
     }
   }
 }

@@ -206,6 +206,7 @@
   }
 
   .example__inner-wrapper {
+    align-content: center;
     margin: 0;
   }
 
@@ -228,6 +229,11 @@
   }
 
   .example__description-text {
+    max-width: 142px;
     background-color: $button-grey;
+    position: relative;
+    top: 0;
+    margin-top: -7px;
+    margin-bottom: -7px;
   }
 }

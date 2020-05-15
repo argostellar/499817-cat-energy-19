@@ -47,6 +47,12 @@
     background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@2x.png");
     background-size: 55px 53px, 320px auto;
   }
+
+  iframe {
+    border: none;
+    width: 100vw;
+    height: 362px;
+  }
 }
 
 @media (min-width: $tablet-size) {
@@ -108,6 +114,10 @@
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@2x.png");
       background-size: 113px 106px, 767px auto;
+    }
+
+    iframe {
+      height: 400px;
     }
   }
 }

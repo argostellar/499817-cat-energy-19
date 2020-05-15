@@ -16,7 +16,7 @@
   @include reset-space;
   align-self: center;
   text-align: center;
-  padding-top: 37px;
+  padding-top: 34px;
   padding-bottom: 31px;
 
   &:hover,
@@ -48,7 +48,7 @@
     align-items: center;
 
     padding: 0 20px;
-    padding-top: 30px;
+    padding-top: 24px;
     margin: 0 10px;
   }
 
@@ -75,7 +75,7 @@
 
   .main-footer__contacts {
     @include desktop-container;
-    margin-top: 27px;
+    margin-top: 21px;
   }
 
   .main-footer__text-logo {

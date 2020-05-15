@@ -25,6 +25,8 @@
   min-width: 25px;
   min-height: 25px;
 
+  height: 28px;
+
   margin: 0 16px;
 
   margin-top: 20px;
@@ -32,14 +34,20 @@
 }
 
 .social__link {
+  display: inline-block;
   text-decoration: none;
   margin-left: 2px;
+  margin-top: auto;
+  margin-bottom: auto;
+  align-self: center;
 }
 
 .social__icon {
   fill: $footer-grey;
 }
 
+.social__link--insta:hover .social__icon:first-child,
+.social__link--insta:focus .social__icon:first-child,
 .social__link:hover .social__icon,
 .social__link:focus .social__icon {
   fill: $green;
@@ -87,10 +95,6 @@
   }
 
   .social__list {
-    @include empty-rule;
-  }
-
-  .social__item {
     @include empty-rule;
   }
 }

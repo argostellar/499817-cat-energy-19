@@ -1,7 +1,6 @@
 .main-header {
   @include flex-column;
   box-sizing: border-box;
-  border-bottom: 1px solid #e6e6e6;
 }
 
 .main-header__logo-link {

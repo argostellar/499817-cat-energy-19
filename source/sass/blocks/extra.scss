@@ -1,5 +1,4 @@
 .extra {
-  @include empty-rule;
   position: relative;
 
   &::after {
@@ -96,6 +95,8 @@
     margin: 0;
     margin-top: -102px;
 
+    margin-bottom: 76px;
+
     &::after {
       top: 22px;
     }
@@ -143,10 +144,6 @@
     margin-left: auto;
   }
 
-  .extra__table-row {
-    @include empty-rule;
-  }
-
   .extra__table-cell {
     min-width: 45px;
     font-size: 16px;
@@ -165,14 +162,10 @@
 }
 
 @media (min-width: $desktop-size) {
-  .extra {
-    @include empty-rule;
-  }
-
   .extra__title {
     &--main {
+      @include desktop-adaptive-margin;
       margin-right: auto;
-      margin-left: 70px;
       margin-bottom: 80px;
       padding-left: 39px;
     }

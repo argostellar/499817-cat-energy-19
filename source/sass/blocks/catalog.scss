@@ -12,14 +12,6 @@
   align-self: flex-start;
 }
 
-.catalog__product-cards {
-  @include empty-rule;
-}
-
-.catalog__extra-items {
-  @include empty-rule;
-}
-
 @media (min-width: $tablet-size) {
   .catalog {
     display: block;

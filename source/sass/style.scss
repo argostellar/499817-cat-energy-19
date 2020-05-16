@@ -1,8 +1,8 @@
 @import "fonts.scss";
 @import "variables.scss";
 @import "mixins.scss";
+@import "scaffolding.scss";
 @import "blocks/button.scss";
-@import "blocks/visually-hidden.scss";
 @import "blocks/main-header.scss";
 @import "blocks/nav.scss";
 @import "blocks/main.scss";
@@ -22,21 +22,3 @@
 @import "blocks/product-cards.scss";
 @import "blocks/table.scss";
 @import "blocks/forms.scss";
-
-body {
-  @include reset-space;
-  background-color: $white;
-
-  font-family: "Oswald", "Arial", sans-serif;
-  font-size: 14px;
-  line-height: 16px;
-
-  color: $black;
-
-  min-width: $mobile-size;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}

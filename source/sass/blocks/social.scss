@@ -88,13 +88,3 @@
     }
   }
 }
-
-@media (min-width: $desktop-size) {
-  .social {
-    @include empty-rule;
-  }
-
-  .social__list {
-    @include empty-rule;
-  }
-}

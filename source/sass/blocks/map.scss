@@ -1,7 +1,3 @@
-.map {
-  @include empty-rule;
-}
-
 .map__info {
   @include mobile-space;
   @include flex-row;
@@ -47,25 +43,38 @@
     background-image: url("../img/map-pin.png"), url("../img/bg-map-mobile@2x.png");
     background-size: 55px 53px, 320px auto;
   }
+}
 
-  iframe {
-    border: none;
-    width: 100vw;
-    height: 362px;
-  }
+.map__iframe {
+  border: none;
+  width: 100vw;
+  max-width: 100%;
+  height: 362px;
 }
 
 @media (min-width: $tablet-size) {
-  .map {
-    @include empty-rule;
+  .map__info {
+    min-height: 201px;
+    padding: 0;
   }
 
-  .map__info {
-    padding-bottom: 55px;
+  @media (max-width: $tablet-width-only) {
+    .map__info--main {
+      margin: 0;
+      background-color: $white;
+    }
+
+    .map__info--main .map__invitation-text {
+      margin-left: 70px;
+    }
+
+    .map__info--main .map__address {
+      margin-right: 71px;
+    }
   }
 
   .map__invitation-text {
-    margin-top: -3px;
+    margin-top: 3px;
     margin-left: 50px;
     max-width: 160px;
     text-align: left;
@@ -77,7 +86,6 @@
     @include flex-column;
     justify-content: space-between;
     margin-right: 51px;
-    margin-top: -7px;
 
     @include tablet-arial-text;
     max-width: 160px;
@@ -89,18 +97,21 @@
   .map__address-line {
     @include reset-space;
 
+    line-height: 20px;
+
     &--top {
-      margin-top: 5px;
+      margin-top: 8px;
       margin-bottom: auto;
     }
 
     &--middle {
-      margin-top: -19px;
+      margin-top: -23px;
       margin-bottom: 0;
     }
 
     &--bottom {
       margin-top: auto;
+      margin-bottom: 2px;
     }
   }
 
@@ -115,16 +126,15 @@
       background-image: url("../img/map-pin.png"), url("../img/bg-map-tablet@2x.png");
       background-size: 113px 106px, 767px auto;
     }
+  }
 
-    iframe {
-      height: 400px;
-    }
+  .map__iframe {
+    height: 400px;
   }
 }
 
 @media (min-width: $desktop-size) {
   .map {
-    @include empty-rule;
     position: relative;
   }
 
@@ -137,7 +147,7 @@
 
     position: absolute;
 
-    left: 90px;
+    left: calc(((100vw - 1300px) / 2) + 20px);
     top: 94px;
 
     background-color: $white;
@@ -153,6 +163,27 @@
     margin: 0;
     margin-right: 16px;
     text-align: left;
+  }
+
+  .map__address-line {
+    @include reset-space;
+
+    line-height: 20px;
+
+    &--top {
+      margin-top: 8px;
+      margin-bottom: auto;
+    }
+
+    &--middle {
+      margin-top: -21px;
+      margin-bottom: 0;
+    }
+
+    &--bottom {
+      margin-top: auto;
+      margin-bottom: 2px;
+    }
   }
 
   .map__map {

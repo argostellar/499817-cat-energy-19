@@ -58,6 +58,14 @@
   padding: 0 40px;
 }
 
+@mixin desktop-adaptive-margin {
+  margin-left: calc((100vw - 1300px) / 2);
+}
+
+@mixin desktop-adaptive-margin-form {
+  margin-left: calc(((100vw - 1300px) / 2) + 39px);
+}
+
 @mixin font-family {
   font-family: "Oswald", "Arial", sans-serif;
 }
@@ -94,6 +102,10 @@
 
 @mixin redline {
   outline: 1px solid red;
+}
+
+@mixin fadeline {
+  outline: 1px solid rgba(red, 0.48);
 }
 
 @mixin yellowline {

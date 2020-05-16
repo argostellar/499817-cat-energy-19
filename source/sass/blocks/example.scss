@@ -1,11 +1,22 @@
 .example {
-  @include mobile-space;
   background-color: $button-grey;
 }
 
 .example__title {
   @include title;
+  margin-left: 20px;
+  margin-right: 20px;
   margin-bottom: 23px;
+}
+
+.example__wrapper {
+  @include flex-column;
+}
+
+@media (max-width: $mobile-width-only) {
+  .example__wrapper {
+    @include mobile-space;
+  }
 }
 
 .example__statistics {
@@ -24,10 +35,6 @@
   margin-bottom: 25px;
   margin-left: 0;
   margin-right: auto;
-}
-
-.example__wrapper {
-  @include flex-column;
 }
 
 .example__statistics-wrapper {
@@ -127,8 +134,13 @@
     @include tablet-text-font;
     max-width: 180px;
     text-align: right;
-    margin-top: 7px;
-    line-height: 29px;
+    margin-top: 11px;
+    line-height: 20px;
+  }
+
+  .example__result-price {
+    display: inline-block;
+    margin-top: 9px;
   }
 
   .example__statistics {
@@ -220,8 +232,8 @@
     text-align: left;
     max-width: 100%;
     align-self: flex-start;
-    margin-top: 22px;
-    margin-bottom: 40px;
+    margin-top: 17px;
+    margin-bottom: 45px;
   }
 
   .example__result-price {

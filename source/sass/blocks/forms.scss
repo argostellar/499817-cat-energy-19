@@ -14,6 +14,8 @@
 
   padding-bottom: 9px;
 
+  position: relative;
+
   &--personal {
     margin-bottom: 20px;
   }
@@ -23,12 +25,31 @@
     padding-bottom: 7px;
   }
 
+  &--contacts,
+  &--comments,
+  &--extra {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 14px;
+      right: 0;
+      width: 100%;
+      height: 3px;
+      background-color: $green;
+      z-index: -1;
+    }
+  }
+
   &--contacts {
     margin-bottom: 2px;
   }
 
   &--comments {
     margin-bottom: 18px;
+
+    &::after {
+      top: 16px;
+    }
   }
 
   &--extra {
@@ -77,44 +98,25 @@
   &--contacts,
   &--comments,
   &--extra {
-    position: relative;
-  }
-
-  &--contacts::after,
-  &--comments::after,
-  &--extra::after {
-    content: "";
-    position: absolute;
-    top: 14px;
-    right: -20px;
-    width: 53px;
-    height: 3px;
-    background-color: $green;
+    background-color: $white;
+    margin-left: 0;
+    padding-left: 19px;
   }
 
   &--contacts {
+    max-width: 201px;
     margin-bottom: 34px;
-
-    &::after {
-      width: 99px;
-    }
   }
 
   &--comments {
+    max-width: 140px;
     margin-top: 2px;
     margin-bottom: 35px;
-
-    &::after {
-      width: 158px;
-    }
   }
 
   &--extra {
+    max-width: 164px;
     margin-bottom: 35px;
-
-    &::after {
-      width: 136px;
-    }
   }
 }
 
@@ -379,11 +381,37 @@
 
 @media (min-width: $tablet-size) {
   .forms {
-    margin-bottom: 107px;
+    margin-bottom: 72px;
   }
 
   .forms__fieldset {
     border: none;
+
+    &--contacts,
+    &--comments,
+    &--extra {
+      &::after {
+        top: 50px;
+      }
+    }
+
+    &--contacts {
+      &::after {
+        top: 62px;
+      }
+    }
+
+    &--comments {
+      &::after {
+        top: 56px;
+      }
+    }
+
+    &--extra {
+      &::after {
+        top: 60px;
+      }
+    }
   }
 
   .forms__title {
@@ -406,53 +434,29 @@
       margin-left: 29px;
     }
 
-    &--contacts::before,
-    &--comments::before,
-    &--extra::before {
-      content: "";
-      position: absolute;
-      top: 22px;
-      left: -29px;
-      width: 30px;
-      height: 3px;
-      background-color: $green;
-    }
-
-    &--contacts::after,
-    &--comments::after,
-    &--extra::after {
-      top: 22px;
-      right: -20px;
+    &--contacts,
+    &--comments,
+    &--extra {
+      margin-left: 29px;
+      padding-left: 40px;
     }
 
     &--contacts {
+      max-width: 513px;
       margin-top: 40px;
-      margin-left: 29px;
       margin-bottom: 76px;
-
-      &::after {
-        width: 145px;
-      }
     }
 
     &--comments {
+      max-width: 179px;
       margin-top: 34px;
       margin-bottom: 76px;
-      margin-left: 29px;
-
-      &::after {
-        width: 479px;
-      }
     }
 
     &--extra {
+      max-width: 212px;
       margin-top: 38px;
       margin-bottom: 57px;
-      margin-left: 29px;
-
-      &::after {
-        width: 446px;
-      }
     }
   }
 
@@ -646,7 +650,6 @@
 
 @media (min-width: $desktop-size) {
   .forms {
-    @include desktop-space;
     margin-bottom: 83px;
   }
 
@@ -673,55 +676,40 @@
       margin: 0;
       margin-top: 70px;
       margin-bottom: 55px;
-    }
 
-    &--contacts::before,
-    &--comments::before,
-    &--extra::before {
-      left: -109px;
-      width: 70px;
-    }
-
-    &--contacts::after,
-    &--comments::after,
-    &--extra::after {
-      right: -130px;
+      @include desktop-adaptive-margin-form;
     }
 
     &--contacts,
     &--comments,
     &--extra {
-      margin-left: -1px;
+      @include desktop-adaptive-margin;
       padding: 0;
+      padding-left: 39px;
     }
 
     &--contacts {
-      &::after {
-        width: 777px;
-      }
+      max-width: 553px;
     }
 
     &--comments {
-      &::after {
-        width: 1111px;
-      }
+      max-width: 219px;
     }
 
     &--extra {
-      &::after {
-        width: 1078px;
-      }
+      max-width: 252px;
     }
   }
 
   .forms__outer-wrapper {
     @include flex-row;
+    @include desktop-container;
     justify-content: space-between;
   }
 
   .forms__wrapper {
+    @include desktop-space;
     min-width: 0;
-    margin: 0;
 
     &--contacts {
       @include flex-row;
@@ -791,13 +779,13 @@
 
   .forms__text {
     &--main {
-      margin-left: 0;
+      @include desktop-adaptive-margin-form;
       margin-bottom: 66px;
     }
   }
 
   .forms__submit-wrapper {
-    margin-left: 0;
+    @include desktop-adaptive-margin-form;
   }
 
   .forms__button {

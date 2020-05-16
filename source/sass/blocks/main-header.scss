@@ -11,10 +11,6 @@
   @include active-states;
 }
 
-.main-header__textlogo-link {
-  @include active-states;
-}
-
 .main-header__wrapper {
   @include flex-row;
   justify-content: space-between;
@@ -28,7 +24,32 @@
   border-bottom: 1px solid #e6e6e6;
 }
 
-.main-header__button {
+.main-header__nav {
+  position: relative;
+}
+
+.main-header__toggle-btn {
+  @include reset-space;
+  border-style: none;
+  background-color: transparent;
+
+  margin-right: -4px;
+  margin-top: 2px;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--nojs {
+    display: none;
+  }
+}
+
+.main-header__toggle-btn-icon {
+  fill: $deep-black;
+}
+
+.main-header__close-btn {
   width: 18px;
   height: 18px;
 
@@ -41,6 +62,14 @@
   background-repeat: no-repeat;
 
   @include active-states;
+
+  &--hidden {
+    display: none;
+  }
+
+  &--nojs {
+    display: none;
+  }
 }
 
 
@@ -68,7 +97,7 @@
     height: 58px;
   }
 
-  .main-header__textlogo-link {
+  .main-header__toggle-btn {
     display: none;
   }
 
@@ -76,7 +105,7 @@
     margin-top: 0;
   }
 
-  .main-header__button {
+  .main-header__close-btn {
     display: none;
   }
 }

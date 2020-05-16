@@ -11,14 +11,14 @@ var del = require("del");
 var csso = require("gulp-csso");
 var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
-var imageminJpegtran = require('imagemin-jpegtran');
+var imageminJpegtran = require("imagemin-jpegtran");
 var webp = require("gulp-webp");
 var svgstore = require("gulp-svgstore");
 var posthtml = require("gulp-posthtml");
 var include = require("posthtml-include");
 var htmlmin = require("gulp-htmlmin");
-var uglify = require('gulp-uglify');
-var pipeline = require('readable-stream').pipeline;
+var uglify = require("gulp-uglify");
+var pipeline = require("readable-stream").pipeline;
 
 gulp.task("css", function () {
   return gulp.src("source/sass/style.scss")
@@ -103,17 +103,17 @@ gulp.task("html", function() {
     .pipe(gulp.dest("build"));
 });
 
-gulp.task('minify', function () {
+gulp.task("minify", function () {
   return gulp.src("source/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest("build"));
 });
 
-gulp.task('compress', function () {
+gulp.task("compress", function () {
   return pipeline(
-        gulp.src('source/js/*.js'),
+        gulp.src("source/js/*.js"),
         uglify(),
-        gulp.dest('build/js')
+        gulp.dest("build/js")
   );
 });
 

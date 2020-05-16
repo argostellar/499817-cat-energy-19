@@ -1,5 +1,25 @@
-.nav {
-  @include empty-rule;
+@media (max-width: $mobile-width-only) {
+  .nav--closed .nav__list {
+    display: none;
+  }
+
+  .nav--opened .nav__list {
+    display: flex;
+
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    z-index: 10;
+
+    background-color: $white;
+  }
+
+  .nav--nojs .nav__list {
+    position: static;
+  }
 }
 
 .nav__list {
@@ -22,7 +42,7 @@
   padding-bottom: 21px;
 
   box-sizing: border-box;
-  border-bottom: 1px solid #e6e6e6;
+  border-bottom: 1px solid $grey;
 }
 
 .nav__link {

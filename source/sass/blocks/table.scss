@@ -21,10 +21,6 @@
 }
 
 @media (min-width: $tablet-size) {
-  .table {
-    @include empty-rule;
-  }
-
   .table__row {
     height: 22px;
     border-bottom: 1px solid $light-grey;
@@ -38,10 +34,6 @@
 }
 
 @media (min-width: $desktop-size) {
-  .table {
-    @include empty-rule;
-  }
-
   .table__row {
     height: 22px;
     border-bottom: 1px solid $light-grey;

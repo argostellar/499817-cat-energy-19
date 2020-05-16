@@ -4,10 +4,6 @@
   background-color: #f2f2f2;
 }
 
-.main-footer__map {
-  @include empty-rule;
-}
-
 .main-footer__contacts {
   @include flex-column;
 }
@@ -38,10 +34,6 @@
 }
 
 @media (min-width: $tablet-size) {
-  .main-footer {
-    @include empty-rule;
-  }
-
   .main-footer__contacts {
     @include flex-row;
     justify-content: space-between;
@@ -69,10 +61,6 @@
 }
 
 @media (min-width: $desktop-size) {
-  .main-footer {
-    @include empty-rule;
-  }
-
   .main-footer__contacts {
     @include desktop-container;
     margin-top: 21px;

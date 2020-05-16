@@ -52,10 +52,6 @@
   padding-top: 11px;
 }
 
-.promo__image {
-  @include empty-rule;
-}
-
 @media (min-width: $tablet-size) {
   .promo {
     @include tablet-space;

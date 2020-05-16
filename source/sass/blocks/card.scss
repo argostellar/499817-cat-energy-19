@@ -43,8 +43,12 @@
   margin-top: 21px;
 }
 
+.card__link {
+  text-decoration: none;
+  color: inherit;
+}
+
 .card__table {
-  @include empty-rule;
   margin-bottom: 22px;
 }
 

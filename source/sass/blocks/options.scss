@@ -46,14 +46,14 @@
 
 .options__title {
   font-size: 24px;
-  line-height: 37, 02px;
+  line-height: 37px;
   font-weight: 400;
 
   margin: 0;
   padding: 0;
 
-  margin-top: 22px;
-  margin-bottom: 40px;
+  margin-top: 12px;
+  margin-bottom: 29px;
 
   text-transform: uppercase;
   text-align: center;
@@ -207,11 +207,11 @@
   .options__title {
     font-size: 36px;
     text-align: left;
-    margin-bottom: 35px;
+    margin-bottom: 24px;
     margin-left: 0;
 
     &--pro {
-      margin-top: 23px;
+      margin-top: 13px;
     }
   }
 
@@ -308,8 +308,8 @@
 
   .options__title {
     @include reset-space;
-    margin-top: 37px;
-    margin-bottom: 85px;
+    margin-top: 26px;
+    margin-bottom: 75px;
     margin-left: 164px;
   }
 
@@ -321,7 +321,7 @@
 
   .options__link {
     padding-left: 2px;
-    margin-top: 10px;
+    margin-top: 11px;
 
     &::after {
       right: initial;

@@ -1,12 +1,15 @@
 .promo {
   @include flex-column;
 
-  background-image: url("../img/index-background-mobile@1x.jpg");
+  background-image: url("../img/index-background-mobile@1x.jpg"),
+    linear-gradient(180deg, $green 305px, transparent 305px 100%);
   background-repeat: no-repeat;
+  background-position: top center;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-    background-image: url("../img/index-background-mobile@2x.jpg");
-    background-size: 320px auto;
+    background-image: url("../img/index-background-mobile@2x.jpg"),
+      linear-gradient(180deg, $green 305px, transparent 305px 100%);
+    background-size: 320px auto, auto;
   }
 }
 
@@ -31,6 +34,8 @@
 
   margin-bottom: 25px;
   margin-top: 1px;
+
+  max-width: 260px;
 }
 
 .promo__text {
@@ -56,11 +61,18 @@
   .promo {
     @include tablet-space;
     background-image: none;
-    margin-left: 117px;
+    background-color: transparent;
+    margin-left: 160px;
   }
 
   .promo__wrapper {
     align-items: flex-start;
+  }
+
+  @media (max-width: $tablet-width-only) {
+    .promo__wrapper {
+      align-self: center;
+    }
   }
 
   .promo__title {

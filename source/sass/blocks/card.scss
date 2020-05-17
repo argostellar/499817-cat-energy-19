@@ -7,22 +7,18 @@
 
   margin-bottom: 24px;
 
-  height: 185px;
+  min-height: 185px;
 }
 
 .card__wrapper {
   @include mobile-space;
   @include flex-row;
-  justify-content: space-around;
+  justify-content: center;
   margin-bottom: 0;
 }
 
 .card__image-wrapper {
-  height: 144px;
-}
-
-.card__image {
-  height: 100%;
+  min-height: 144px;
 }
 
 .card__table-wrapper {
@@ -49,12 +45,12 @@
 }
 
 .card__table {
-  margin-bottom: 22px;
+  margin-bottom: 24px;
 }
 
 .card__button {
   @include mobile-space;
-  height: 40px;
+  max-height: 40px;
   font-size: 16px;
   line-height: 20px;
 
@@ -66,11 +62,15 @@
 
 @media (min-width: $tablet-size) {
   .card {
-    background-color: $button-grey;
+    @include flex-column;
+    justify-content: flex-end;
+    background-image: linear-gradient(to top, $button-grey 78.36%, transparent 78.36%); /* 431px; */
     min-width: 324px;
-    min-height: 431px;
+    min-height: 550px;
 
-    padding: 40px 37px;
+    padding: 40px 0;
+
+    border: none;
   }
 
   .card__title {
@@ -81,25 +81,34 @@
     max-width: 130px;
 
     margin-top: -2px;
-    margin-bottom: 27px;
+    margin-bottom: 24px;
   }
 
   .card__wrapper {
     @include flex-column;
     justify-content: center;
     margin: 0;
-    min-height: 350px;
+    margin-bottom: 2px;
   }
 
   .card__table-wrapper {
-    margin-top: -20px;
+    margin: 0 37px;
   }
 
   .card__image-wrapper {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
     width: auto;
-    height: 100px;
+    height: auto;
 
-    position: relative;
+    margin-bottom: 36px;
+  }
+
+  .card__image-link {
+    @include flex-column;
+    justify-content: center;
+    align-items: center;
   }
 
   .card__image {
@@ -107,15 +116,6 @@
     height: auto;
 
     max-width: 130%;
-
-    position: absolute;
-
-    top: -131px;
-    left: -37px;
-
-    &--large {
-      top: -167px;
-    }
   }
 
   .card__button {
@@ -123,10 +123,10 @@
     height: auto;
     min-height: auto;
 
+    margin: 0 37px;
+
     padding-top: 10px;
     padding-bottom: 10px;
-
-    margin-top: -45px;
   }
 }
 
@@ -135,17 +135,12 @@
     align-items: center;
   }
 
-  .card__wrapper {
+  .card__table-wrapper {
     width: 169px;
   }
 
   .card__image {
     max-width: 155%;
-    top: -130px;
-
-    &--large {
-      top: -166px;
-    }
   }
 
   .card__button {

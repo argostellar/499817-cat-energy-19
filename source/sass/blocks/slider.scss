@@ -78,7 +78,6 @@
 
 @media (min-width: $tablet-size) {
   .slider {
-    @include fadeline;
     background-color: $slider-lightgrey;
     min-height: 462px;
     justify-content: flex-end;

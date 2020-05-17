@@ -15,7 +15,6 @@
   justify-content: space-between;
   align-items: center;
   margin-left: 2px;
-  margin-bottom: 5px;
 }
 
 .social__item {
@@ -29,8 +28,8 @@
 
   margin: 0 16px;
 
-  margin-top: 20px;
-  margin-bottom: 13px;
+  margin-top: 19px;
+  margin-bottom: 14px;
 }
 
 .social__link {
@@ -67,6 +66,7 @@
   }
 
   .social__item {
+    height: auto;
     justify-content: center;
     margin: 0;
   }

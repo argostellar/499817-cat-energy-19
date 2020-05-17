@@ -100,10 +100,9 @@
 
   .bonus__wrapper {
     min-width: auto;
-    min-height: auto;
 
     width: 245px;
-    height: 289px;
+    min-height: 289px;
 
     @include flex-column;
 

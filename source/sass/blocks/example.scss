@@ -31,10 +31,12 @@
 .example__text {
   @include arial-text;
   @include reset-space;
-  max-width: 270px;
+  max-width: calc(270px + (100vw - 320px));
   margin-bottom: 25px;
   margin-left: 0;
-  margin-right: auto;
+
+  text-align: left;
+  align-self: flex-start;
 }
 
 .example__statistics-wrapper {
@@ -48,6 +50,16 @@
   justify-content: space-between;
   width: 100%;
   margin-bottom: 35px;
+}
+
+@media (max-width: $mobile-width-only) {
+  .example__statistics {
+    align-items: center;
+  }
+
+  .example__statistics-wrapper {
+    min-width: 280px;
+  }
 }
 
 .example__inner-wrapper {
@@ -104,10 +116,6 @@
 
   text-transform: uppercase;
   text-align: center;
-}
-
-.example__slider {
-  @include empty-rule;
 }
 
 @media (min-width: $tablet-size) {
@@ -167,7 +175,7 @@
 
   .example__central-text {
     font-size: 30px;
-    line-height: 37.02px;
+    line-height: 37px;
     margin-top: 14px;
   }
 
@@ -182,17 +190,12 @@
 }
 
 @media (min-width: $desktop-size) {
-  .example {
-    background-image: linear-gradient(to bottom, $white 22.5%, $button-grey 22.5%);
-  }
-
   .example__title {
     @include desktop-container;
-    margin-bottom: 76px;
+    margin-bottom: 75px;
   }
 
   .example__wrapper {
-    @include desktop-container;
     @include flex-row;
     justify-content: space-between;
     background-color: $button-grey;
@@ -202,7 +205,14 @@
     background-color: $button-grey;
     justify-content: space-between;
     margin: 0;
+    margin-left: auto;
+    margin-right: 103px;
     max-width: 570px;
+  }
+
+  .example__slider {
+    margin-right: auto;
+    margin-left: 103px;
   }
 
   .example__statistics-wrapper {
@@ -224,7 +234,7 @@
 
   .example__text {
     max-width: 445px;
-    margin-top: 70px;
+    margin-top: 71px;
     margin-bottom: 0;
   }
 
@@ -238,6 +248,10 @@
 
   .example__result-price {
     margin-left: 59px;
+  }
+
+  .example__central-text {
+    margin-top: 16px;
   }
 
   .example__description-text {

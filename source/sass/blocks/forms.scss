@@ -170,6 +170,11 @@
     @include flex-row;
     align-items: center;
 
+    &:focus,
+    &:hover {
+      opacity: 0.6;
+    }
+
     &:active {
       opacity: 0.4;
     }
@@ -272,6 +277,10 @@
   &--checkbox {
     display: none;
   }
+
+  &[disabled] {
+    opacity: 0.4;
+  }
 }
 
 .forms__input--personal:focus + .forms__label .forms__label-icon {
@@ -330,6 +339,15 @@
 
 .forms__input--checkbox:checked + .forms__pseudo-checkbox > .forms__pseudo-tick {
   fill: $green;
+}
+
+.forms__input--checkbox[disabled] + .forms__pseudo-checkbox > .forms__pseudo-tick,
+.forms__input--checkbox[disabled] + .forms__pseudo-checkbox + .forms__label-text,
+.forms__input--checkbox[disabled] + .forms__pseudo-checkbox,
+.forms__input--radio[disabled] + .forms__pseudo-radio,
+.forms__input--radio[disabled] + .forms__pseudo-radio + .forms__label-text,
+.forms__input--radio[disabled] + .forms__pseudo-radio > .forms__pseudo-checked {
+  opacity: 0.4;
 }
 
 .forms__comments {

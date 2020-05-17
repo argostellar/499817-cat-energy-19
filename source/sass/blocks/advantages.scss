@@ -1,6 +1,6 @@
 .advantages {
   @include mobile-space;
-  margin-bottom: 59px;
+  margin-bottom: 39px;
 }
 
 .advantages__title {
@@ -13,10 +13,27 @@
   @include clear-list;
 }
 
+@media (max-width: $mobile-width-only) {
+  .advantages {
+    @include flex-column;
+    align-items: center;
+  }
+
+  .advantages__title {
+    align-self: flex-start;
+  }
+
+  .advantages__list {
+    @include flex-column;
+    align-items: flex-start;
+    max-width: calc(280px + (100vw - 320px));
+  }
+}
+
 .advantages__item {
   @include reset-space;
   @include flex-row;
-  flex-wrap: no-wrap;
+  flex-wrap: nowrap;
   justify-content: space-between;
   align-items: flex-start;
 
@@ -81,7 +98,7 @@
   @include reset-space;
   margin-top: 2px;
   margin-left: 20px;
-  margin-right: 0;
+  margin-right: auto;
 
   @include arial-text;
 }

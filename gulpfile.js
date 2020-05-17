@@ -123,8 +123,6 @@ gulp.task("build", gulp.series(
   "images",
   "webp",
   "css",
-  "sprite",
-  "html",
   "minify",
   "compress"
 ));

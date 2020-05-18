@@ -8,7 +8,14 @@
   margin-left: -3px;
   margin-top: -3px;
 
-  @include active-states;
+  &:hover,
+  &:focus {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-header__wrapper {

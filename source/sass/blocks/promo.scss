@@ -62,7 +62,7 @@
     @include tablet-space;
     background-image: none;
     background-color: transparent;
-    margin-left: 160px;
+    margin-left: 117px;
   }
 
   .promo__wrapper {
@@ -72,6 +72,10 @@
   @media (max-width: $tablet-width-only) {
     .promo__wrapper {
       align-self: center;
+    }
+
+    .promo__image {
+      max-width: 150%;
     }
   }
 
@@ -116,16 +120,18 @@
     order: 3;
   }
 
+  .promo__image-wrapper {
+    order: 4;
+    z-index: -1;
+  }
+
   .promo__image {
     width: 709px;
     height: 609px;
 
-    z-index: -1;
-
-    margin-top: -40px;
-    margin-bottom: -40px;
-    margin-left: -44px;
-    order: 4;
+    margin-top: -80px;
+    margin-bottom: -3px;
+    margin-left: -88px;
   }
 }
 
@@ -175,11 +181,15 @@
     margin-left: 80px;
   }
 
+  .promo__image-wrapper {
+    z-index: 1;
+  }
+
 
   .promo__image {
     position: absolute;
-    top: 52px;
-    right: 109px;
+    top: 103px;
+    right: 219px;
     width: 552px;
     height: 499px;
     align-self: flex-end;

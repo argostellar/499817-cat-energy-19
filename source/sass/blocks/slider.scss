@@ -57,9 +57,9 @@
 
 
   box-sizing: border-box;
-  border: 1px solid #cdcdcd;
+  border: 1px solid $light-grey;
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: $white;
 }
 
 .slider__pin {
@@ -116,6 +116,7 @@
     width: 428px;
     height: 6px;
     border: none;
+    background-color: $grey-slider;
     margin: 0;
     margin-bottom: -2px;
   }
@@ -210,6 +211,7 @@
   }
 
   .slider__image-wrapper {
+    overflow-x: hidden;
     margin-left: -81px;
   }
 

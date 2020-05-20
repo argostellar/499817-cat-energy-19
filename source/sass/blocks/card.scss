@@ -64,7 +64,7 @@
   .card {
     @include flex-column;
     justify-content: flex-end;
-    background-image: linear-gradient(to top, $button-grey 78.36%, transparent 78.36%); /* 431px; */
+    background-image: linear-gradient(to bottom, transparent 119px, $button-grey 119px); /* 431px; */
     min-width: 324px;
     min-height: 550px;
 
@@ -97,10 +97,11 @@
 
   .card__image-wrapper {
     @include flex-column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
     width: auto;
     height: auto;
+    min-height: 210px;
 
     margin-bottom: 36px;
   }
@@ -124,6 +125,7 @@
     min-height: auto;
 
     margin: 0 37px;
+    margin-bottom: auto;
 
     padding-top: 10px;
     padding-bottom: 10px;

@@ -86,7 +86,6 @@
 }
 
 @mixin active-states {
-
   &:hover,
   &:focus {
     opacity: 0.6;

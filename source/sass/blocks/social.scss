@@ -88,3 +88,16 @@
     }
   }
 }
+
+@media (min-width: $desktop-size) {
+  .social__item {
+    height: 28px;
+  }
+
+  .social__link {
+    @include flex-row;
+    align-items: center;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
